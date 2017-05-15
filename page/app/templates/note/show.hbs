@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 padding-top">
+      <form>
+        <div class="form-group">
+          <label>Titulo:</label>
+          {{textarea value=model.title cols="40" rows="1" class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label>Contenido:</label>
+          {{textarea value=model.content cols="40" rows="10" class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label>Autor:</label>
+          {{textarea value=model.author cols="40" rows="1" class="form-control"}}
+        </div>
+        <div class="btn-group">
+          <button type="delete" class="btn btn-danger" {{action 'delete' on='click' }}>borrar</button>
+          <button type="submit" class="btn btn-success" {{action 'update' on='click' }}>modificar</button>
+          {{#link-to 'index' tagName="button" class="btn btn-primary"}}Index{{/link-to}}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
