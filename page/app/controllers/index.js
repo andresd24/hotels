@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
         content: this.get('contenido'),
         author: this.get('autor')
       });
-      this.set('titulo', "");
+      this.set('titulo', "creada");
       this.set('contenido', "");
       this.set('autor', "");
       note.save();

@@ -31,5 +31,27 @@
         {{/each}}
       </div>
     </div>
+
+    <div>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Content</th>
+        <th>Content</th>
+      </tr>
+      {{#each model as |item|}}
+      <tr>
+        <td>{{item.title}}</td>
+        <td>{{item.content}}</td>
+        <td>{{item.author}}</td>
+        <td>  {{#link-to 'note.show' item.id class="btn btn-primary" tagName="button" }}
+          details
+        {{/link-to}}
+        </td>
+      </tr>
+        {{/each}}
+    </table>
+    </div>
+
   </div>
 </div>
